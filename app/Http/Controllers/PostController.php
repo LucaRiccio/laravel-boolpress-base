@@ -43,7 +43,7 @@ class PostController extends Controller
       $request->validate([
         'title'=>'required|min:5|max:100',
         'body'=>'required|min:5|max:500',
-        'user_id'=>'required|numeric|exists:user,id'
+        'user_id'=>'required|numeric|exists:users,id'
       ]);
       $postNew = new Post();
       $postNew->fill($data);
