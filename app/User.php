@@ -40,4 +40,8 @@ class User extends Authenticatable
     public function avatar(){
       return $this->hasOne('App\Avatar'); // relazione con il model Avatar
     }
+
+    public function posts(){
+      return $this->hasMany('App\Post');
+    }
 }
